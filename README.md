@@ -40,7 +40,7 @@ Set LambdaTest Username and Access Key in environment variables.
 > #### Try Demo in Gitpod
 >   Select the button below to try this demo in [Gitpod](https://www.gitpod.io/)
 >
->  [![Open in Gitpod](open-in-gitpod.png)](https://gitpod.io/#https://github.com/LambdaTest/playwright-sample)
+>  [![Open in Gitpod](open-in-gitpod.png)](https://gitpod.io/#https://github.com/ltamit/Playwright_LT_Repo)
 >
 >   After the gitpod session launches, navigate to the terminal and run the following commands to save your [LambdaTest Credentials](https://accounts.lambdatest.com/detail/profile) to gitpod as environment variables:
 >   ```
