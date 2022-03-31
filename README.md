@@ -59,7 +59,7 @@ Set LambdaTest Username and Access Key in environment variables.
 
 ## Execution
 
-`$ node playwright-single.js `
+`$ node playwright-lt-single.js `
 
 ## About LambdaTest
 

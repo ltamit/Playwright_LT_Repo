@@ -1,17 +1,27 @@
 const { test } = require('../lambdatest-setup')
 const { expect } = require('@playwright/test')
 
-test.describe('Browse LambdaTest in different search engines', () => {
-  test('Search LambdaTest on Bing', async ({ page }) => {
-    await page.goto('https://www.bing.com')
-    const element = await page.$('[aria-label="Enter your search term"]')
-    await element.click()
-    await element.type('LambdaTest')
-    await element.press('Enter')
-    const title = await page.title()
-
-    console.log('Page title:: ', title)
-    // Use the expect API for assertions provided by playwright
-    expect(title).toEqual(expect.stringContaining('LambdaTest'))
-  })
-})
+test('test', async ({ page }) => {
+  // Go to https://lambdatest.github.io/sample-todo-app/
+  await page.goto('https://lambdatest.github.io/sample-todo-app/');
+  // Check input[name="li1"]
+  await page.locator('input[name="li1"]').check();
+  // Check input[name="li2"]
+  await page.locator('input[name="li2"]').check();
+  // Check input[name="li3"]
+  await page.locator('input[name="li3"]').check();
+  // Click [placeholder="Want to add more"]
+  await page.locator('[placeholder="Want to add more"]').click();
+  // Fill [placeholder="Want to add more"]
+  await page.locator('[placeholder="Want to add more"]').fill('Sixth Item');
+  // Click text=add
+  await page.locator('text=add').click();
+  // Click [placeholder="Want to add more"]
+  await page.locator('[placeholder="Want to add more"]').click();
+  // Fill [placeholder="Want to add more"]
+  await page.locator('[placeholder="Want to add more"]').fill('Seventh Item');
+  // Click text=add
+  await page.locator('text=add').click();
+  // Check input[name="li6"]
+  await page.locator('input[name="li6"]').check();
+});
